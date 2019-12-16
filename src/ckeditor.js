@@ -30,6 +30,8 @@ import Table from "@ckeditor/ckeditor5-table/src/table";
 import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar";
 import Base64UploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter";
 import Font from "@ckeditor/ckeditor5-font/src/font";
+import FontColor from "@ckeditor/ckeditor5-font/src/fontcolor";
+import FontBackgroundColor from "@ckeditor/ckeditor5-font/src/fontbackgroundcolor";
 import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
 import MathType from "@wiris/mathtype-ckeditor5";
 
@@ -63,6 +65,8 @@ BalloonEditor.builtinPlugins = [
 	TableToolbar,
 	FontFamily,
 	Font,
+	FontColor,
+	FontBackgroundColor,
 	MathType
 ];
 
@@ -85,7 +89,6 @@ BalloonEditor.defaultConfig = {
 			"insertTable",
 			"MathType",
 			"ChemType",
-			"PasteFromOffice",
 			"|",
 			"undo",
 			"redo"
@@ -94,9 +97,8 @@ BalloonEditor.defaultConfig = {
 	image: {
 		toolbar: [
 			"imageStyle:full",
-			"imageStyle:side",
-			"|",
-			"imageTextAlternative"
+			"imageStyle:alignLeft",
+			"imageStyle:alignRight"
 		]
 	},
 	table: {
