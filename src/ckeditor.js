@@ -31,6 +31,7 @@ import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar";
 import Base64UploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter";
 import Font from "@ckeditor/ckeditor5-font/src/font";
 import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
+import MathType from "@wiris/mathtype-ckeditor5";
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -61,7 +62,8 @@ BalloonEditor.builtinPlugins = [
 	Base64UploadAdapter,
 	TableToolbar,
 	FontFamily,
-	Font
+	Font,
+	MathType
 ];
 
 // Editor configuration.
@@ -70,20 +72,21 @@ BalloonEditor.defaultConfig = {
 		items: [
 			"fontFamily",
 			"fontSize",
-			"|",
 			"bold",
 			"italic",
-			"link",
-			"bulletedList",
-			"numberedList",
-			"|",
-			"indent",
-			"outdent",
+			// "bulletedList",  // not working , dont know why
+			// "numberedList",     // not working , dont know why
+			// "|",
+			// "indent",   // not working , dont know why
+			// "outdent",  // not working , dont know why
 			"|",
 			"imageUpload",
 			"blockQuote",
 			"insertTable",
-			"mediaEmbed",
+			"MathType",
+			"ChemType",
+			"PasteFromOffice",
+			"|",
 			"undo",
 			"redo"
 		]
@@ -100,5 +103,5 @@ BalloonEditor.defaultConfig = {
 		contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: "en"
+	language: "zh-cn"
 };
