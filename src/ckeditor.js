@@ -73,6 +73,9 @@ BalloonEditor.builtinPlugins = [
 // Editor configuration.
 BalloonEditor.defaultConfig = {
 	toolbar: {
+		alignment: {
+			options: ["left", "right", "center"]
+		},
 		items: [
 			"fontFamily",
 			"fontSize",
